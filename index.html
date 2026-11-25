@@ -153,7 +153,12 @@ const map = L.map('map', {
 }).setView([25, 10], 2);
 
 L.tileLayer(
-    'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 8
+    }
+).addTo(map);
     {
         attribution: '&copy; OpenStreetMap &copy; CARTO',
         maxZoom: 8
